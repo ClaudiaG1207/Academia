@@ -1,0 +1,15 @@
+C:\Users\Claudia Guevara\OneDrive\Escritorio\Gerencia\ProyecAcademiaEuropea\CapaNegocio\bin\Debug\CapaNegocio.dll.config
+C:\Users\Claudia Guevara\OneDrive\Escritorio\Gerencia\ProyecAcademiaEuropea\CapaNegocio\bin\Debug\CapaNegocio.dll
+C:\Users\Claudia Guevara\OneDrive\Escritorio\Gerencia\ProyecAcademiaEuropea\CapaNegocio\bin\Debug\CapaNegocio.pdb
+C:\Users\Claudia Guevara\OneDrive\Escritorio\Gerencia\ProyecAcademiaEuropea\CapaNegocio\obj\Debug\CapaNegocio.csproj.AssemblyReference.cache
+C:\Users\Claudia Guevara\OneDrive\Escritorio\Gerencia\ProyecAcademiaEuropea\CapaNegocio\obj\Debug\CapaNegocio.Properties.Resources.resources
+C:\Users\Claudia Guevara\OneDrive\Escritorio\Gerencia\ProyecAcademiaEuropea\CapaNegocio\obj\Debug\CapaNegocio.csproj.GenerateResource.cache
+C:\Users\Claudia Guevara\OneDrive\Escritorio\Gerencia\ProyecAcademiaEuropea\CapaNegocio\obj\Debug\CapaNegocio.csproj.CoreCompileInputs.cache
+C:\Users\Claudia Guevara\OneDrive\Escritorio\Gerencia\ProyecAcademiaEuropea\CapaNegocio\obj\Debug\CapaNegocio.dll
+C:\Users\Claudia Guevara\OneDrive\Escritorio\Gerencia\ProyecAcademiaEuropea\CapaNegocio\obj\Debug\CapaNegocio.pdb
+C:\Users\Claudia Guevara\OneDrive\Escritorio\Gerencia\ProyecAcademiaEuropea\CapaNegocio\bin\Debug\BCrypt.Net.dll
+C:\Users\Claudia Guevara\OneDrive\Escritorio\Gerencia\ProyecAcademiaEuropea\CapaNegocio\bin\Debug\BCrypt.Net.xml
+C:\Users\Claudia Guevara\OneDrive\Escritorio\Gerencia\ProyecAcademiaEuropea\CapaNegocio\obj\Debug\CapaNegocio.csproj.CopyComplete
+C:\Users\Claudia Guevara\OneDrive\Escritorio\Gerencia\ProyecAcademiaEuropea\CapaNegocio\bin\Debug\CapaDatos.dll
+C:\Users\Claudia Guevara\OneDrive\Escritorio\Gerencia\ProyecAcademiaEuropea\CapaNegocio\bin\Debug\CapaDatos.pdb
+C:\Users\Claudia Guevara\OneDrive\Escritorio\Gerencia\ProyecAcademiaEuropea\CapaNegocio\bin\Debug\CapaDatos.dll.config
