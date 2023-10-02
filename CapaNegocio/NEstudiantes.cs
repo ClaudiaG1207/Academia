@@ -16,10 +16,21 @@ namespace CapaNegocio
         {
             Estu.InseeEtudiantes(Ced, NomAp, Direc, edad, Cel, Correo, Nacionalidad);
         }
-
+        public void EliminarEstudiante(int id)
+        {
+            Estu.EliminarEstudiante(id);
+        }
+        public void editarestudiante(int id,string Ced, string NomAp, string Direc, int edad, int Cel, string Correo, string Nacionalidad)
+        {
+            Estu.editarestudiantes(id,Ced, NomAp, Direc, edad, Cel, Correo, Nacionalidad);
+        }
         public void MostarEstudiante(DataTable dt)
         {
             Estu.MostarEstudiante(ref dt);
+        }
+        public void BuscarEstudiante(DataTable dt, string buscador)
+        {
+            Estu.BuscarEstudiantes(ref dt,buscador);
         }
     }
 }

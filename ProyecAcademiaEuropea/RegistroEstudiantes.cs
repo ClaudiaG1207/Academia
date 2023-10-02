@@ -6,6 +6,8 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -28,13 +30,14 @@ namespace ProyecAcademiaEuropea
         public int FCel;
         public string FCorreo;
         public string FNacionalidad;
+        int idestudiante;
 
         private void INSERTAR()
 
         {
             FCedula = TxtCedEstu.Text;
             FNomAp = TxtNomEstu.Text;
-            FDirec= TxtDirecEstu.Text;
+            FDirec = TxtDirecEstu.Text;
             FEdad = int.Parse(TxtEdadEStu.Text);
             FCel = int.Parse(TxtCelEstu.Text);
             FCorreo = TxtCorreoEstu.Text;
@@ -47,7 +50,7 @@ namespace ProyecAcademiaEuropea
             TxtCelEstu.Clear();
             TxtCorreoEstu.Clear();
             CBNacionalidad.Text = "";
-            Estudiante.AgregarEstudiante(FCedula, FNomAp, FDirec, FEdad,FCel, FCorreo, FNacionalidad);
+            Estudiante.AgregarEstudiante(FCedula, FNomAp, FDirec, FEdad, FCel, FCorreo, FNacionalidad);
             MostrarEstudiante();
             MessageBox.Show("Se realizo el regitro con exito");
         }
@@ -59,7 +62,6 @@ namespace ProyecAcademiaEuropea
             funcion.MostarEstudiante(dt);
             dtEstudiantes.DataSource = dt;
             Bases.DiseñoDtv(ref dtEstudiantes);
-            dtEstudiantes.Columns[7].Visible = false;
         }
         private void TxtDirecEstu_TextChanged(object sender, EventArgs e)
         {
@@ -87,11 +89,6 @@ namespace ProyecAcademiaEuropea
         {
 
         }
-        
-        private void dtEstudiantes_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
 
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
@@ -105,6 +102,88 @@ namespace ProyecAcademiaEuropea
 
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void dtEstudiantes_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == dtEstudiantes.Columns["Eliminar"].Index)
+            {
+                DialogResult result = MessageBox.Show("¿Desea eliminar este estudiante?", "Eliminando registros", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (result == DialogResult.OK)
+                {
+                    EliminarEstudiante();
+                    MostrarEstudiante();
+                }
+
+            }
+            if (e.ColumnIndex == dtEstudiantes.Columns["Editar"].Index)
+            {
+                CapturarDatos();
+                btnActualizar.Visible = true;
+                BtnGuardar.Visible = false;
+            }
+        }
+        private void CapturarDatos()
+        {
+
+            idestudiante = int.Parse(dtEstudiantes.SelectedCells[3].Value.ToString());
+            TxtCedEstu.Text = dtEstudiantes.SelectedCells[4].Value.ToString();
+            TxtNomEstu.Text = dtEstudiantes.SelectedCells[5].Value.ToString();
+            TxtDirecEstu.Text = dtEstudiantes.SelectedCells[6].Value.ToString();
+            TxtEdadEStu.Text = dtEstudiantes.SelectedCells[7].Value.ToString();
+            TxtCelEstu.Text = dtEstudiantes.SelectedCells[8].Value.ToString();
+            TxtCorreoEstu.Text = dtEstudiantes.SelectedCells[9].Value.ToString();
+            CBNacionalidad.Text = dtEstudiantes.SelectedCells[10].Value.ToString();
+
+
+
+        }
+        private void EditarEstudiantes()
+
+        {
+
+            FCedula = TxtCedEstu.Text;
+            FNomAp = TxtNomEstu.Text;
+            FDirec = TxtDirecEstu.Text;
+            FEdad = int.Parse(TxtEdadEStu.Text);
+            FCel = int.Parse(TxtCelEstu.Text);
+            FCorreo = TxtCorreoEstu.Text;
+            FNacionalidad = CBNacionalidad.Text;
+
+            TxtCedEstu.Clear();
+            TxtNomEstu.Clear();
+            TxtDirecEstu.Clear();
+            TxtEdadEStu.Clear();
+            TxtCelEstu.Clear();
+            TxtCorreoEstu.Clear();
+            CBNacionalidad.Text = "";
+            Estudiante.editarestudiante(idestudiante, FCedula, FNomAp, FDirec, FEdad, FCel, FCorreo, FNacionalidad);
+            MostrarEstudiante();
+            MessageBox.Show("Se actualizo el regitro con exito", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+        private void EliminarEstudiante()
+        {
+            idestudiante = int.Parse(dtEstudiantes.SelectedCells[3].Value.ToString());
+            Estudiante.EliminarEstudiante(idestudiante);
+        }
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                EditarEstudiantes();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void txtbuscar_TextChanged(object sender, EventArgs e)
+        {
+            DataTable dt = new DataTable();
+            Estudiante.BuscarEstudiante(dt, txtbuscar.Text);
+            dtEstudiantes.DataSource = dt;
+            Bases.DiseñoDtv(ref dtEstudiantes);
         }
     }
 }

@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using CapaDatos;
 using System.Windows.Forms;
+using System.Runtime.ConstrainedExecution;
 
 namespace CapaDatos
 {
@@ -46,7 +47,70 @@ namespace CapaDatos
             }
             finally { Conect.cerrar(); }
         }
+        public void editarestudiantes(int idestudiante,string ced, string NomA, string direc, int Edad, int cel, string correo, string nacionalidad)
+        {
+            try
+            {
+                Conect.Abrir();
+                SqlCommand cmd = new SqlCommand("EditarEstudiantes", CD_Conexion.conectar);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@IdEstudiante", idestudiante);
+                cmd.Parameters.AddWithValue("@Cedula", ced);
+                cmd.Parameters.AddWithValue("@NomAp", NomA);
+                cmd.Parameters.AddWithValue("@Direccion", direc);
+                cmd.Parameters.AddWithValue("@Edad", Edad);
+                cmd.Parameters.AddWithValue("@cel", cel);
+                cmd.Parameters.AddWithValue("@Correo", correo);
+                cmd.Parameters.AddWithValue("@Nacionalidad", nacionalidad);
+                cmd.ExecuteNonQuery();
+                
 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+               
+            }
+            finally
+            {
+                Conect.cerrar();
+            }
+        }
+        public void EliminarEstudiante(int id)
+        {
+            try
+            {
+                Conect.Abrir();
+                SqlCommand cmd = new SqlCommand("EliminarEstudiante", CD_Conexion.conectar);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@idestudiante", id);               
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.StackTrace);
 
+            }
+            finally
+            {
+                Conect.cerrar();
+            }
+        }
+        public void BuscarEstudiantes(ref DataTable dt, string buscador)
+        {
+            try
+            {
+                Conect.Abrir();
+                SqlDataAdapter da = new SqlDataAdapter("BuscarEstudiantes", CD_Conexion.conectar);
+                da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                da.SelectCommand.Parameters.AddWithValue("@Buscador", buscador);
+                da.Fill(dt);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.StackTrace);
+            }
+            finally { Conect.cerrar(); }
+        }
     }
 }

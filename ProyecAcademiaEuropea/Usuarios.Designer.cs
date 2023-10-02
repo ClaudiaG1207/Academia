@@ -58,26 +58,29 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Modern No. 20", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(353, 139);
+            this.label10.Location = new System.Drawing.Point(530, 217);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(144, 30);
+            this.label10.Size = new System.Drawing.Size(226, 45);
             this.label10.TabIndex = 23;
             this.label10.Text = "Contraseña:";
             // 
             // TxtContra
             // 
-            this.TxtContra.Location = new System.Drawing.Point(529, 139);
+            this.TxtContra.Location = new System.Drawing.Point(794, 217);
+            this.TxtContra.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TxtContra.Multiline = true;
             this.TxtContra.Name = "TxtContra";
-            this.TxtContra.Size = new System.Drawing.Size(188, 30);
+            this.TxtContra.Size = new System.Drawing.Size(280, 45);
             this.TxtContra.TabIndex = 22;
             // 
             // TxtUsuario
             // 
-            this.TxtUsuario.Location = new System.Drawing.Point(529, 85);
+            this.TxtUsuario.Location = new System.Drawing.Point(794, 133);
+            this.TxtUsuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TxtUsuario.Multiline = true;
             this.TxtUsuario.Name = "TxtUsuario";
-            this.TxtUsuario.Size = new System.Drawing.Size(188, 28);
+            this.TxtUsuario.Size = new System.Drawing.Size(280, 42);
             this.TxtUsuario.TabIndex = 21;
             // 
             // label7
@@ -85,9 +88,10 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Modern No. 20", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(371, 83);
+            this.label7.Location = new System.Drawing.Point(556, 130);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(110, 30);
+            this.label7.Size = new System.Drawing.Size(170, 45);
             this.label7.TabIndex = 20;
             this.label7.Text = "Usuario:";
             // 
@@ -96,9 +100,10 @@
             this.BtnGuardar.BackColor = System.Drawing.Color.Gold;
             this.BtnGuardar.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnGuardar.ForeColor = System.Drawing.Color.Navy;
-            this.BtnGuardar.Location = new System.Drawing.Point(480, 229);
+            this.BtnGuardar.Location = new System.Drawing.Point(720, 358);
+            this.BtnGuardar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BtnGuardar.Name = "BtnGuardar";
-            this.BtnGuardar.Size = new System.Drawing.Size(131, 37);
+            this.BtnGuardar.Size = new System.Drawing.Size(196, 58);
             this.BtnGuardar.TabIndex = 24;
             this.BtnGuardar.Text = "Guadar";
             this.BtnGuardar.UseVisualStyleBackColor = false;
@@ -136,16 +141,17 @@
             this.Eliminar,
             this.Editar});
             this.dtUsuarios.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dtUsuarios.Location = new System.Drawing.Point(0, 290);
-            this.dtUsuarios.Margin = new System.Windows.Forms.Padding(13, 12, 13, 12);
+            this.dtUsuarios.Location = new System.Drawing.Point(0, 453);
+            this.dtUsuarios.Margin = new System.Windows.Forms.Padding(20, 19, 20, 19);
             this.dtUsuarios.Name = "dtUsuarios";
             this.dtUsuarios.ReadOnly = true;
             this.dtUsuarios.RowHeadersWidth = 82;
+            this.dtUsuarios.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
             this.dtUsuarios.RowTemplate.Height = 33;
             this.dtUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtUsuarios.ShowCellToolTips = false;
             this.dtUsuarios.ShowEditingIcon = false;
-            this.dtUsuarios.Size = new System.Drawing.Size(954, 279);
+            this.dtUsuarios.Size = new System.Drawing.Size(1431, 436);
             this.dtUsuarios.TabIndex = 26;
             // 
             // space1
@@ -180,9 +186,10 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 11);
+            this.pictureBox1.Location = new System.Drawing.Point(18, 17);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(285, 265);
+            this.pictureBox1.Size = new System.Drawing.Size(428, 414);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 27;
             this.pictureBox1.TabStop = false;
@@ -190,9 +197,10 @@
             // BtnMini
             // 
             this.BtnMini.Image = ((System.Drawing.Image)(resources.GetObject("BtnMini.Image")));
-            this.BtnMini.Location = new System.Drawing.Point(878, 14);
+            this.BtnMini.Location = new System.Drawing.Point(1317, 22);
+            this.BtnMini.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BtnMini.Name = "BtnMini";
-            this.BtnMini.Size = new System.Drawing.Size(25, 33);
+            this.BtnMini.Size = new System.Drawing.Size(38, 52);
             this.BtnMini.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.BtnMini.TabIndex = 28;
             this.BtnMini.TabStop = false;
@@ -201,9 +209,10 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(921, 12);
+            this.pictureBox2.Location = new System.Drawing.Point(1382, 19);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(25, 33);
+            this.pictureBox2.Size = new System.Drawing.Size(38, 52);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 29;
             this.pictureBox2.TabStop = false;
@@ -212,9 +221,10 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(823, 12);
+            this.pictureBox3.Location = new System.Drawing.Point(1234, 19);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(38, 35);
+            this.pictureBox3.Size = new System.Drawing.Size(57, 55);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 30;
             this.pictureBox3.TabStop = false;
@@ -225,9 +235,10 @@
             this.BtnEliminar.BackColor = System.Drawing.Color.Gold;
             this.BtnEliminar.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEliminar.ForeColor = System.Drawing.Color.Navy;
-            this.BtnEliminar.Location = new System.Drawing.Point(637, 229);
+            this.BtnEliminar.Location = new System.Drawing.Point(956, 358);
+            this.BtnEliminar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BtnEliminar.Name = "BtnEliminar";
-            this.BtnEliminar.Size = new System.Drawing.Size(131, 37);
+            this.BtnEliminar.Size = new System.Drawing.Size(196, 58);
             this.BtnEliminar.TabIndex = 69;
             this.BtnEliminar.Text = "Elimar";
             this.BtnEliminar.UseVisualStyleBackColor = false;
@@ -237,19 +248,20 @@
             this.BtnEditar.BackColor = System.Drawing.Color.Gold;
             this.BtnEditar.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEditar.ForeColor = System.Drawing.Color.Navy;
-            this.BtnEditar.Location = new System.Drawing.Point(784, 229);
+            this.BtnEditar.Location = new System.Drawing.Point(1176, 358);
+            this.BtnEditar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BtnEditar.Name = "BtnEditar";
-            this.BtnEditar.Size = new System.Drawing.Size(131, 37);
+            this.BtnEditar.Size = new System.Drawing.Size(196, 58);
             this.BtnEditar.TabIndex = 68;
             this.BtnEditar.Text = "Editar";
             this.BtnEditar.UseVisualStyleBackColor = false;
             // 
             // Usuarios
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Navy;
-            this.ClientSize = new System.Drawing.Size(954, 569);
+            this.ClientSize = new System.Drawing.Size(1431, 889);
             this.Controls.Add(this.BtnEliminar);
             this.Controls.Add(this.BtnEditar);
             this.Controls.Add(this.pictureBox3);
@@ -264,7 +276,9 @@
             this.Controls.Add(this.label7);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Usuarios";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Usuarios";
             this.Load += new System.EventHandler(this.Usuarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtUsuarios)).EndInit();
